@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+  
+{% block content %}
+  <h2>Search</h2>
+  <p>This is a search page.</p>
+  <form method="POST">
+    <label for = "search">Search</label><br>
+    <input type = "radio" name = "byName"/>
+    <label for = "byName">name</label>
+    <input type = "radio" name = "byLocal"/>
+    <label for = "byLocal">local</label><br>
+    <input type = "text" name = "search"/>
+    <input type = "submit" value = "Search" />
+  </form>
+  {% if result %}
+  <h3> Result </h3>
+  <table>
+
+  <tr>
+  <td>rank</td>
+  </tr>
+  <tr>
+      <td>{{result }}</td>
+  </tr>
+  </table>
+  {% endif %}
+
+{% endblock %}

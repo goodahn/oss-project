@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="jumbo">
+    <h2>Welcome to the our service<h2>
+    <h3>This is the home page for automatic candidate analysis!<h3>
+  </div>
+<form action = "{{ request.path }}" method = "post">
+    <label for = "name">Name</label><br>
+    <input type = "text" name = "name" placeholder = "Name" /><br>
+    <label for = "rank">Rank</label><br>
+    <input type = "text" name = "rank" placeholder = "Rank" /><br>
+    <input type = "submit" value = "Submit" />
+</form>
+{% endblock %}
